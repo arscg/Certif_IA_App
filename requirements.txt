@@ -1,2 +1,35 @@
+# Flask and related extensions
+Flask
+Flask-RESTx
+Flask-JWT-Extended
+
+# Database and ORM
+SQLAlchemy
+pandas
+PyYAML
+pymysql
+
+# JWT and authentication
+cryptography
+
+# MLFlow for model management
+mlflow
+
+# HTTP requests
+requests
+
+# Streamlit for the web application
+streamlit
+
+# Testing
 pytest
+pytest-flask
+pytest-mock
 pytest-cov
+
+# Deployment tools (if using Heroku and Streamlit Cloud)
+gunicorn
+psycopg2-binary  # For Postgres on Heroku, if applicable
+
+# Other utilities
+numpy
