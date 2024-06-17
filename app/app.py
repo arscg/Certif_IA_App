@@ -1,7 +1,7 @@
 from flask import Flask
 import tracemalloc
 from flask_jwt_extended import JWTManager
-# from routes import configure_routes
+from routes import configure_routes
 from flask_restx import Api
 # from database import db_manager
 
