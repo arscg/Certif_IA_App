@@ -24,10 +24,19 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Set PYTHONPATH
+      run: |
+        echo "PYTHONPATH=$PYTHONPATH:$(pwd)" >> $GITHUB_ENV
+
+    - name: Remove pycaches
+      run: |
+        find . -type d -name "__pycache__" -exec rm -r {} +
+        find . -type f -name "*.pyc" -exec rm -f {} +
+
     - name: Run tests
       run: |
-        pytest
-    #     pytest --doctest-modules --junitxml=junit/test-results.xml --cov=.
+        mkdir -p junit
+        pytest --doctest-modules --junitxml=junit/test-results.xml --cov=.
 
     - name: Upload test results
       if: always()
