@@ -24,8 +24,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    # - name: Run tests
-    #   run: |
+    - name: Run tests
+      run: |
+        pytest
     #     pytest --doctest-modules --junitxml=junit/test-results.xml --cov=.
 
     - name: Upload test results
